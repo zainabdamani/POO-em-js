@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Carro {
+            constructor(marca, modelo, ano, cor, ligado){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.ano = ano;
+                this.cor = cor;     
+                this.ligado = ligado;
+                console.log("construtor executado")
+            }
+            
+            ligar(){
+                this.ligado = true;
+                console.log("meu carro ta ligado")
+            }
+
+            desligar(){
+                this.ligado = false;
+                console.log("meu carro ta desligado")
+            }
+
+            pintar(){
+                console.log(`a cor do meu carro eh `+ this.cor)
+            }
+
+            info(){
+                let estadoCarro
+                if (this.ligado === true) {
+                    estadoCarro = "ligado"
+                } else {
+                    estadoCarro = "desligado"
+                }
+                console.log(`meu carro eh `+ this.marca + ` modelo `+ this.modelo + ` ano ` + this.ano + ` cor ` + this.cor + ` e ele esta ` + estadoCarro)
+            }
+        }
+
+
+    
+       meuCarro = new Carro("toyota", "corola", 2020, "rosa", true)
+       meuCarro.ligar()
+       meuCarro.desligar()
+       meuCarro.pintar()
+       meuCarro.info()
+
+    </script>
+</body>
+</html>
